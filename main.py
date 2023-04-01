@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
+from ball import Ball
 
 # Screen setup
 sc = Screen()
@@ -9,30 +10,28 @@ sc.bgcolor("black")
 # Stop animation
 sc.tracer(0)
 
+# Create turtle from class
 
-#  Paddle shape
-paddle = Turtle()
-paddle.shape("square")
-paddle.color("white")
-paddle.shapesize(stretch_wid=5, stretch_len=1)
-paddle.penup()
-paddle.speed(0)
-paddle.goto(-350, 0)
+l_paddle = Paddle((-350, 0), "blue", "square")
+r_paddle = Paddle((350, 0), "red", "square")
+ball = Paddle((0, 0), "white", "circle")
 
 # Paddle movement
 
-def move_up():
-    new_y = paddle.ycor() + 20
-    paddle.goto(paddle.xcor(), new_y)
-
-def move_down():
-    new_y = paddle.ycor() - 20
-    paddle.goto(paddle.xcor(), new_y)
-
 sc.listen()
 
-sc.onkey(move_up, "Up")
-sc.onkey(move_down, "Down")
+# Right Paddle
+sc.onkey(r_paddle.move_up, "Up")
+sc.onkey(r_paddle.move_down, "Down")
+
+# Left Paddle
+sc.onkey(l_paddle.move_up, "w")
+sc.onkey(l_paddle.move_down, "s")
+
+# Ball movement
+
+ball.dx = 2
+ball.dy = 2
 
 # Game loop
 
@@ -40,6 +39,9 @@ start_game = True
 
 while start_game:
     sc.update()
+    ball.dx += 2
+    ball.dy += 2
+    ball.goto(ball.dx, ball.dy)
 
 
 sc.exitonclick()

@@ -64,14 +64,56 @@ sc.onkey(move_down, "Down")
 ```
 ![Alt text](images/paddle_movement.gif)
 
-
-
-
-
     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <hr>  
 
+## Paddle Class <a name="paddle_class"></a>
+Move all code to paddle class.
+
+
+[paddle.py](paddle.py)
+
+```Python
+from turtle import Turtle, Screen
+
+class Paddle(Turtle):
+    def __init__(self, position, color):
+        super().__init__()
+        self.shape("square")
+        self.color(color)
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.penup()
+        self.speed(0)
+        self.goto(position)
+```
+
+[main.py](main.py)
+
+```Python
+from paddle import Paddle
+
+# Create turtle from class
+
+l_paddle = Paddle((-350, 0), "blue")
+r_paddle = Paddle((350, 0), "red")
+```
+
+Left paddle move with "w" and "s" keys
+
+```Python
+# Left Paddle
+sc.onkey(l_paddle.move_up, "w")
+sc.onkey(l_paddle.move_down, "s")
+```
+
+Right paddle moce with "Up" and "Down" keys
+
+```Python
+# Right Paddle
+sc.onkey(r_paddle.move_up, "Up")
+sc.onkey(r_paddle.move_down, "Down")
+```
 
 
 <!-- 
