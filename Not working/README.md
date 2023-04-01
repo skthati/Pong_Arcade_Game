@@ -19,7 +19,7 @@
 
 <!-- Pong Game -->
 ## Pong Game <a name="test"></a>
-Test Test
+Screen setup
 
 1. Code
     ```Python

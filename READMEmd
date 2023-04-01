@@ -1,0 +1,101 @@
+# Pong_Arcade_Game
+<a name="readme-top"></a>
+# Pong Game
+
+<div align="center">
+<!-- Title: -->
+<h1><a href="https://github.com/skthati/Pong_Arcade_Game/">Pong Game</a> - Python Turtle </h1>
+</div>
+
+<!-- Table of contents -->
+<hr>
+<hr>
+<ol>
+    <li><a href="#pong-game">Pong Game</a></li>
+    <li><a href="#basics">Basics</a> </li>
+</ol>
+<hr>
+<hr>
+
+<!-- Pong Game -->
+## Pong Game <a name="test"></a>
+Famous arcade game.
+
+Screen setup
+```Python
+from turtle import Turtle, Screen
+
+sc = Screen()
+sc.setup(800, 600)
+sc.bgcolor("black")
+
+sc.exitonclick()
+```
+
+![Alt text](images/paddle.png)
+
+### Create paddle shape
+
+```Python
+#  Paddle shape
+paddle = Turtle()
+paddle.shape("square")
+paddle.color("white")
+paddle.shapesize(stretch_wid=5, stretch_len=1)
+```
+
+### Paddle movement
+
+```Python
+# Paddle movement
+
+def move_up():
+    new_y = paddle.ycor() + 20
+    paddle.goto(paddle.xcor(), new_y)
+
+def move_down():
+    new_y = paddle.ycor() - 20
+    paddle.goto(paddle.xcor(), new_y)
+
+sc.listen()
+
+sc.onkey(move_up, "Up")
+sc.onkey(move_down, "Down")
+```
+![Alt text](images/paddle_movement.gif)
+
+
+
+
+
+    
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
+
+
+
+<!-- 
+
+Test1  
+## Test <a name="test"></a>
+Test Test
+
+1. Code
+    ```Python
+    sc.onkey(key="Up", fun=up_move)
+    sc.onkey(key="Right", fun=right_move)
+    sc.onkey(key="Left", fun=left_move)
+    sc.onkey(key="Down", fun=down_move)
+    ```
+
+2. Output
+
+    ![Alt text](images/snake_working.gif)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
+
+
+-->
+
+ 
