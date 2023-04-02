@@ -1,6 +1,6 @@
-# Pong_Arcade_Game
+
 <a name="readme-top"></a>
-# Pong Game
+
 
 <div align="center">
 <!-- Title: -->
@@ -17,8 +17,63 @@
 <hr>
 <hr>
 
+
+ <!--Pong Game  -->
+## Pong Game <a name="pong-game"></a>
+Very famous Pong game.
+
+Ball speed increases on every successful paddle hit.
+
+Ball speed resets, if a paddle misses the ball.
+
+Each side gets a score, if other side paddle misses the ball.
+
+Game rules.
+
+* Use "Up" or "Down" keys to control right paddle.
+* Use "w" or "s" keys to control left paddle.
+
+
+Output
+
+![Pong Game ](images/working_pong_game.gif)
+
+Game files.
+
+[main.py](main.py)
+
+[paddle.py](paddle.py)
+
+[ball.py](paddle.py)
+
+[score_board](score_board.py)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
+
+<!-- Bloopers   -->
+## Bloopers <a name="bloopers"></a>
+Some blooper gifs.
+
+Paddle drawing lines.
+![Alt text](Not%20working/Images/moving_paddle.gif)
+
+Ball starts from random place and flies off.
+
+![Alt text](images/ball_movement.gif)
+
+This shows paddle creation and also paddle moving to its position. Also paddle going out of screen.
+
+![Alt text](images/paddle_movement.gif)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
+
+
 <!-- Pong Game -->
-## Pong Game <a name="test"></a>
+## Pong Game Screen Setup <a name="pong_game_screen"></a>
 Famous arcade game.
 
 Screen setup
